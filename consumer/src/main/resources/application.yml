@@ -1,0 +1,13 @@
+server:
+  port: 8081
+spring:
+  application:
+       name: provider-consumer
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:7070/eureka/
+
+provider-server:
+    ribbon:
+      NFLoadBalancerRuleClassName: cn.gxufe.spring.cloud.config.MyRoundRobinRule

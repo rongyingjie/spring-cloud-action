@@ -1,0 +1,32 @@
+server:
+  port: 8080
+
+
+
+
+mybatis:
+  mapper-locations: classpath:mybatis/mapper/*.xml
+  config-location: classpath:mybatis/mybatis.xml
+
+
+spring:
+  datasource:
+    password: admin123
+    username: root
+    url: jdbc:mysql://127.0.0.1:3306/spring_boot
+    driver-class-name: com.mysql.jdbc.Driver
+  application:
+       name: provider-server
+
+
+logging:
+  level:
+    root: info
+    tk.mybatis: debug
+    org.mybatis: debug
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:7070/eureka/
+

@@ -1,0 +1,10 @@
+server:
+  port: 7070
+  application:
+    name: eureka-server
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:7070/eureka/
+    fetch-registry: false
+    register-with-eureka: false
